@@ -35,22 +35,15 @@
         Hi! {{ param2 }}! ✅</h1>
 
     Here you can see the results of my SPACE API, see you around ! 
-  <button onclick="appear()" class="ui primary basic button">Click</button>
+  <button id="button_1" class="ui primary basic button">Click</button>
 
   <p id="api"> </p>
-
-  Hi! {{ article }}! ✅
-
 </div>
 
+   <h1 id="article_full"> Hi! {{ article.title }}! ✅</h1>
+   {{dump(article)}}
 
 
-
-<script>
-function appear() {
-  document.getElementById("api").innerHTML = "Content";
-}
-</script>
 
 
 {% endblock %}

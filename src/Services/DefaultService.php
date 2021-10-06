@@ -44,7 +44,10 @@ class DefaultService
 
          curl_close($curl);
      
-         return $result;
+         return json_decode(
+            $result
+         );
+
 
          
     }
@@ -56,11 +59,14 @@ class DefaultService
         $url = "https://api.spaceflightnewsapi.net/v3/articles/".$nbRandom;
         $result = $this-> callapi($url, NULL);// une methode c'est une fonction à l'intérieur d'une classe 
         
+        
 
         return $result;
+        
 
 
-    }        
+    }      
+    
 
 }
 
