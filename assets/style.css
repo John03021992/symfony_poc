@@ -2,5 +2,79 @@ img{
     width: 100%;
 }
 
+body {
 
+    color: white;
+}
+
+.hero{
+    height: 100vh;
+    background-image: url(../../symfony_poc/public/images/astronaut_cover.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+     
+}
+
+.hero_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    font-size: 3rem;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero_p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.ui.menu{
+    margin: 0;
+    font-size: 1.2rem;
+    top: 0;
+    left: 0;
+    position: fixed;   
+    z-index: 100000;
+    background: #020204;
+    width: 100%;
+    border-bottom: 1px solid white;
+    
+}
+
+.ui.menu .item{
+    color: white;
+}
+
+.ui.menu a.item:hover{
+    color: #2185d0;
+}
+
+.ui.menu .item.active{
+    color: white;
+}
+
+.ui.menu .item.active:hover{
+    color: #2185d0;
+}
+
+
+.part2_home{
+    height: 100vh;
+    background-image: url(../../symfony_poc/public/images/astronaut2.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#article_full{
+    text-align: center;
+}
 
