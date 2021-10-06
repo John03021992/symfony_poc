@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+
+
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="ui menu">
+  
+  <a href="default" class="item">
+    Index 1
+  </a>
+  <a href="index2" class="item active">
+    Index 2
+  </a>
+  <a href="index3" class="item">
+    Index 3
+  </a>
+  <a href="index4" class="item">
+    Index 4
+  </a>
+   <a href="api" class="item">
+    API
+  </a>
+</div>
+
+<div class="example-wrapper">
+    <h1>
+        Hi! {{ param2 }}! ✅</h1>
+
+    Go check the others pages !
+  
+</div>
+
+{% endblock %}
