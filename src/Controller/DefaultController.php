@@ -34,7 +34,7 @@ class DefaultController extends AbstractController
     #[Route('/index2', name: 'index2')]
     public function index2(): Response
     {
-        dump('test');
+        
 
        
 
@@ -47,7 +47,7 @@ class DefaultController extends AbstractController
     #[Route('/index3', name: 'index3')]
     public function index3(): Response
     {
-        dump('test');
+       
 
       
 
@@ -62,8 +62,6 @@ class DefaultController extends AbstractController
     {
         dump('test');
 
-       
-
         return $this->render('default/index4.html.twig', [
             'controller_name' => 'DefaultController',
             'param2' => $this->service->test(),
@@ -73,7 +71,7 @@ class DefaultController extends AbstractController
     #[Route('/api', name: 'api')]
     public function api(): Response
     {
-        dump('test');
+       
 
         $article = $this->service->randArticles(); 
         dump($article);
@@ -81,6 +79,20 @@ class DefaultController extends AbstractController
         return $this->render('default/api.html.twig', [
             'controller_name' => 'DefaultController',
             'param2' => $this->service->test(),
+            'article' => $article,
+        ]);
+    }
+
+    #[Route('/api2', name: 'api2')]
+    public function api2(): Response
+    {
+       
+
+        $article = $this->service->randArticles(); 
+        dump($article);
+        
+        return $this->render('article.html.twig', [
+           
             'article' => $article,
         ]);
     }

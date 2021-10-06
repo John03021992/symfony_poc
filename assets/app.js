@@ -14,10 +14,10 @@ $("#button_1").on("click", (e) => {
 
         $.ajax({
              type: "GET",
-             url: '/api',
+             url: '/api2',
              success:function(html) {
-                 console.log($(html))
-               $("#article_full").html($(html).find('#article_full').html())
+                 console.log(html)
+               $("#article_full").html(html)
              }
   
         });
