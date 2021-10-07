@@ -1,6 +1,6 @@
-    <h2 class="title" id="article_full">{{ article.title }}!</h2>
-    <img src="{{ article.imageUrl }}!" class="image_url" id="article_full"></img>
-    <p class="summary" id="article_full">{{ article.summary }}!</p>
-    <p class="news_site" id="article_full">{{ article.newsSite }}!</p>
-    <p class="published_date" id="article_full">{{ article.publishedAt }}!</p>
-    <p id="updated_date">{{ article.updatedAt }}!</p>
+    <h2 class="title" id="article_full">{{ article.title }}</h2>
+    <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="article_full"></img><div>
+    <p class="summary" id="article_full">{{ article.summary }}</p>
+    <p class="news_site" id="article_full">Source : {{ article.url }}</p>
+    <p class="published_date" id="article_full">Published date : {{ article.publishedAt }}</p>
+    <p class="updated_date" id="article_full">Updated date : {{ article.updatedAt }}</p>

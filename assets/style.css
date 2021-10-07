@@ -3,8 +3,9 @@ img{
 }
 
 body {
-
+    letter-spacing: 0.1rem;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero{
@@ -78,32 +79,69 @@ body {
     color: black;
 }
 
+.parent_button{
+    display: flex;
+    justify-content: center;
+}
+
+#button_1{
+margin-top: 2.5rem;
+padding: 1rem;
+width: 10rem;
+font-size: 1.2rem;
+}
+
 .title{
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     text-decoration: underline;
+    width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    
 }
 
+.parent_img{
+  display: flex; 
+  flex-direction: column;  
+}
 
 .image_url{
-text-align: center;
+width: 50rem;
+margin: 0 auto;
+padding: 1.5rem;
 }
 
 .summary{
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
 
 }
 
 .news_site{
-
+    font-size: 1rem;
+    width: 45rem;
+    margin: 0 auto;
+    
 }
 
 .published_date{
-
+    font-size: 1rem;
+    width: 45rem;
+    margin: 0 auto;
+    
 }
 
 .updated_date{
-
+    font-size: 1rem;
+    width: 45rem;
+    margin: 0 auto;
+    
 }
 
 
