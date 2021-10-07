@@ -36,8 +36,14 @@
 
 
 
- <button id="button_1" class="ui inverted primary button">Primary</button>
-   <h2 id="article_full">{{ article.title }}!</h2>
+ <button id="button_1" class="ui inverted primary button">Click me</button>
+    <h2 class="title" id="article_full">{{ article.title }}!</h2>
+    <img src="{{ article.imageUrl }}!" class="image_url" id="article_full"></img>
+    <p class="summary" id="article_full">{{ article.summary }}!</p>
+    <p class="news_site" id="article_full">{{ article.newsSite }}!</p>
+    <p class="published_date" id="article_full">{{ article.publishedAt }}!</p>
+    <p id="updated_date">{{ article.updatedAt }}!</p>
+    
    {{dump(article)}}
 
 

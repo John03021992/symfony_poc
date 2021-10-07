@@ -75,12 +75,35 @@ body {
 }
 
 #article_full{
-    text-align: center;
     color: black;
 }
 
-.hero_index_2{
-    
+.title{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.image_url{
+text-align: center;
+}
+
+.summary{
+
+}
+
+.news_site{
+
+}
+
+.published_date{
+
+}
+
+.updated_date{
+
 }
 
 
