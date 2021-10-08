@@ -12,17 +12,17 @@
    Home
   </a>
   <a href="index2" class="item">
-    Index 2
-  </a>
-  <a href="index3" class="item">
-    Index 3
-  </a>
-  <a href="index4" class="item">
-    Index 4
+    Article binder
   </a>
   <a href="api" class="item active">
     Space API
   </a>
+  <a> {% if app.user %}
+        <div class="mb-3">
+            <span style="color:white">Welcome back {{ app.user.username }}</span> <a href="{{ path('app_logout') }}"><span style="color:red;">Logout</span></a>
+        </div>
+    {% endif %}
+    </a>
 </div>
 
   <h1 class="hero_title">Here you can have a randomn article by clicking the button bellow</h1>

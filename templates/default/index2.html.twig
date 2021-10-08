@@ -19,17 +19,17 @@
     Home
   </a>
   <a href="index2" class="item active">
-    Index 2
-  </a>
-  <a href="index3" class="item">
-    Index 3
-  </a>
-  <a href="index4" class="item">
-    Index 4
+    Article binder
   </a>
    <a href="api" class="item">
     Space API
   </a>
+  <a> {% if app.user %}
+        <div class="mb-3">
+            <span style="color:white">Welcome back {{ app.user.username }}</span> <a href="{{ path('app_logout') }}"><span style="color:red;">Logout</span></a>
+        </div>
+    {% endif %}
+    </a>
 </div>
 
 
