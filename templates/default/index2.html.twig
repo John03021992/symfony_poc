@@ -26,7 +26,7 @@
   </a>
   <a> {% if app.user %}
         <div class="mb-3">
-            <span style="color:white">Welcome back {{ app.user.username }}</span> <a href="{{ path('app_logout') }}"><span style="color:red;">Logout</span></a>
+            <span style="color:white">{{ app.user.username }}</span> <a href="{{ path('app_logout') }}"><span style="color:red;">Logout</span></a>
         </div>
     {% endif %}
     </a>
