@@ -38,13 +38,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Role::class, inversedBy="users")
+     * @ORM\OneToMany(targetEntity=Favorite::class, mappedBy="user")
      */
-    private $role;
+    private $favorites;
 
     public function __construct()
     {
-        $this->role = new ArrayCollection();
+        $this->favorites = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -87,14 +87,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getRoles(): array
     {
-        $userRoles = $this->getRole();
-
-        foreach ($userRoles as $userRole) {
-            $roles[] = $userRole->getRoleName();
-        }
-
+        $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        // $roles[] = 'ROLE_USER';
+        $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
@@ -142,27 +137,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return Collection|Role[]
+     * @return Collection|Favorite[]
      */
-    public function getRole(): Collection
+    public function getFavorites(): Collection
     {
-        return $this->role;
+        return $this->favorites;
     }
 
-    public function addRole(Role $role): self
+    public function addFavorite(Favorite $favorite): self
     {
-        if (!$this->role->contains($role)) {
-            $this->role[] = $role;
+        if (!$this->favorites->contains($favorite)) {
+            $this->favorites[] = $favorite;
+            $favorite->setUser($this);
         }
 
         return $this;
     }
 
-    public function removeRole(Role $role): self
+    public function removeFavorite(Favorite $favorite): self
     {
-        $this->role->removeElement($role);
+        if ($this->favorites->removeElement($favorite)) {
+            // set the owning side to null (unless already changed)
+            if ($favorite->getUser() === $this) {
+                $favorite->setUser(null);
+            }
+        }
 
         return $this;
     }
-
 }
