@@ -177,3 +177,23 @@ input{
      color: white;
      border: 1px solid white; 
  }
+
+ #img_fav{
+     width: 100%;
+ }
+
+ #parent_grid{
+     margin-top: 5rem;
+     padding: 1rem;
+ }
+
+ .title_fav{
+     font-size: 1.2rem;
+     font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    
+ }
+
+ .section_2_api{
+     height: 100vh;
+ }

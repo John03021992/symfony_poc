@@ -31,15 +31,14 @@ class DefaultController extends AbstractController
         ]);
     }
 
-    #[Route('/index2', name: 'index2')]
-    public function index2(): Response
+    #[Route('/favorite', name: 'favorite')]
+    public function favorite(): Response
     {
+        $article = $this->service->randArticles(); 
         
-       
-
-        return $this->render('default/index2.html.twig', [
+        return $this->render('default/favorite.html.twig', [
             'controller_name' => 'DefaultController',
-            'param2' => $this->service->test(),
+            'article' => $article,
         ]);
     }
 
@@ -58,6 +57,9 @@ class DefaultController extends AbstractController
             'article' => $article,
         ]);
     }
+    
+
+
 
     #[Route('/api2', name: 'api2')]
     public function api2(): Response

@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+
+
+<div class="ui menu">
+  
+  <a href="default" class="item">
+    Home
+  </a>
+  <a href="favorite" class="item active">
+    Favorite
+  </a>
+   <a href="api" class="item">
+    Space API
+  </a>
+  <a> {% if app.user %}
+        <div class="mb-3">
+            <span style="color:white">{{ app.user.username }}</span> <a href="{{ path('app_logout') }}"><span style="color:red;">Logout</span></a>
+        </div>
+    {% endif %}
+    </a>
+</div>
+
+<!-- grid system !-->
+
+<div class="ui three column grid" id="parent_grid">
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="ui three column grid">
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
+      <h2 class="title_fav">{{ article.title }}</h2>
+      <p class="id_fav">ID n°{{ article.id }}</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

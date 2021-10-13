@@ -42,7 +42,7 @@ security:
     access_control:
          - { path: '^/api', roles: [ROLE_USER, ROLE_ADMIN] }
          - { path: '^/default', roles: [ROLE_USER, ROLE_ADMIN] }
-         - { path: '^/index2', roles: [ROLE_USER, ROLE_ADMIN] }
+         - { path: '^/favorite', roles: [ROLE_USER, ROLE_ADMIN] }
          
          
          

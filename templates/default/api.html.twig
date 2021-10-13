@@ -11,8 +11,8 @@
   <a href="default" class="item">
    Home
   </a>
-  <a href="index2" class="item">
-    Article binder
+  <a href="favorite" class="item">
+    Favorite
   </a>
   <a href="api" class="item active">
     Space API
@@ -28,21 +28,15 @@
   <h1 class="hero_title">Here you can have a randomn article by clicking the button bellow</h1>
   <p class="hero_p">Go check it out</p>
 </section>
+<section class="section_2_api">
 
 
 
  <div class="parent_button"><button id="button_1" class="ui inverted primary button">Random article</button>
  <button id="button_1" class="ui inverted primary button">Add to favorite</button></div>
 
-    <h2 class="title" id="article_full">{{ article.title }}</h2>
-    <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="article_full"></img></div>
-    <p class="summary" id="article_full">{{ article.summary }}</p>
-    <p class="news_site" id="article_full"><span style="font-weight:600">Source : </span>{{ article.url }}</p><br>
-    <p class="published_date" id="article_full"><span style="font-weight:600">Published date : </span>{{ article.publishedAt }}</p><br>
-    <p class="updated_date" id="article_full"><span style="font-weight:600">Updated date : </span>{{ article.updatedAt }}</p><br>
-    
-   {{dump(article)}}
+    <h2 class="title" id="article_full"></h2>
 
-
+</section>
 
 {% endblock %}

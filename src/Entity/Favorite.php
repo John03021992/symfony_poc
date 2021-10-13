@@ -20,8 +20,14 @@ class Favorite
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $addFavorite;
+    private $title;
 
+    /**
+     * @ORM\Column(type="string", length=500)
+     */
+    private $imageUrl;
+
+    
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="favorites")
      */
@@ -32,14 +38,33 @@ class Favorite
         return $this->id;
     }
 
-    public function getAddFavorite(): ?string
+    public function setId(int $id): self
     {
-        return $this->addFavorite;
+        $this->id = $id;
+
+        return $this;
     }
 
-    public function setAddFavorite(string $addFavorite): self
+    public function getTitle(): ?string
     {
-        $this->addFavorite = $addFavorite;
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getImageUrl(): ?string
+    {
+        return $this->imageUrl;
+    }
+
+    public function setImageUrl(string $imageUrl): self
+    {
+        $this->imageUrl = $imageUrl;
 
         return $this;
     }
