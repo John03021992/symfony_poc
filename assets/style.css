@@ -187,11 +187,14 @@ input{
      padding: 1rem;
  }
 
+ #parent_grid2{
+    padding: 1rem;
+}
+
  .title_fav{
      font-size: 1.2rem;
      font-style: italic;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif; 
  }
 
  .section_2_api{
