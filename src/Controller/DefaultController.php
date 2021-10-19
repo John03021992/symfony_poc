@@ -50,6 +50,7 @@ class DefaultController extends AbstractController
 
         $article = $this->service->randArticles(); 
         dump($article);
+
         
         return $this->render('default/api.html.twig', [
             'controller_name' => 'DefaultController',

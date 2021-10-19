@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Favorite;
 use App\Services\FavoriteService;
@@ -25,19 +26,15 @@ class FavoriteController extends AbstractController
     }
 
     #[Route('/addfavorite', name: 'addfavorite')]
-    public function addFavorite(): Response 
+    public function addFavorite(Request $request): Response 
     {
         $entityManager = $this->getDoctrine()->getManager();
 
 
         $favorite = new Favorite();
-        $favorite->setId($_GET['id']);
-        $favorite->setTitle($_GET['title']);
-        $favorite->setImageUrl($_GET['imageUrl']);
+        $favorite->setTitle($request->query->get('title'));
+        $favorite->setImageUrl($request->query->get('imageUrl'));
         $favorite->setUser($this->getUser());
-
-        
-        
 
        
         $this->favoriteService->addFavorite($favorite);
@@ -58,6 +55,6 @@ class FavoriteController extends AbstractController
         
         return new Response('Deleted favorite with id '.$favorite->getId());
 
-    }
-
+    } 
+ 
 }

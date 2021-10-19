@@ -24,3 +24,20 @@ $("#button_1").on("click", (e) => {
    
 })
 
+$("#button_2").on("click", (e) => {
+
+  $.ajax({
+       type: "GET",
+       url: '/addfavorite',
+       data: {title:$('h2#article_full').text(),imageUrl:$('img#article_full').attr('src')},
+       success:function(html) {
+           console.log(html)
+         $('#article_full').text(html)
+       }
+
+  });
+
+})
+
+
+
