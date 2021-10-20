@@ -6,6 +6,10 @@ use App\Services\DefaultService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Favorite;
+use App\Entity\User;
+use App\Repository\FavoriteRepository;
+use Symfony\Component\Form\Extension\Core\DataTransformer\BooleanToStringTransformer;
 
 class DefaultController extends AbstractController
 {
@@ -34,11 +38,19 @@ class DefaultController extends AbstractController
     #[Route('/favorite', name: 'favorite')]
     public function favorite(): Response
     {
-        $article = $this->service->randArticles(); 
+        $favorites = $this->getUser()->getFavorites();
+        $article = $this->service->randArticles();
+        $userId = $this->getUser()->getId();
         
+
         return $this->render('default/favorite.html.twig', [
             'controller_name' => 'DefaultController',
             'article' => $article,
+            'userId' => $userId,
+            'favorites' => $favorites,
+
+            
+            
         ]);
     }
 

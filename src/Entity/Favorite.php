@@ -4,8 +4,9 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
- * @ORM\Entity(repositoryClass=FavoriteRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\FavoriteRepository")
  */
 class Favorite
 {

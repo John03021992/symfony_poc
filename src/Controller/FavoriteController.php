@@ -44,6 +44,16 @@ class FavoriteController extends AbstractController
 
     }
 
+    public function getFavoritesByUserId($userId)
+    {
+        $favorites = $this->favoriteService->getFavoritesByUserId($userId);
+
+        return $favorites;
+    
+    }
+
+    
+
 
     public function removeFavorite(): Response 
     {
@@ -53,8 +63,9 @@ class FavoriteController extends AbstractController
 
         $this->favoriteService->removeFavorite($favorite);
         
-        return new Response('Deleted favorite with id '.$favorite->getId());
+        return new Response('Deleted favorite with id '.$favorite->getId().' with user'.$this->getUser());
 
     } 
+    
  
 }

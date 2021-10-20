@@ -189,14 +189,12 @@ input{
      width: 100%;
  }
 
- #parent_grid{
-     margin-top: 5rem;
-     padding: 1rem;
- }
-
- #parent_grid2{
-    padding: 1rem;
+#parent_fav{
+  width: 750px;  
+  margin: 5rem auto;
 }
+
+
 
  .title_fav{
      font-size: 1.2rem;

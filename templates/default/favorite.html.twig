@@ -24,55 +24,29 @@
     </a>
 </div>
 
-<!-- grid system !-->
 
-<div class="ui three column grid" id="parent_grid">
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
+
+{% for favorite in favorites %}
+
+<div class="ui card" id="parent_fav">
+  <div class="image">
+    <img src="{{ favorite.imageUrl }}">
   </div>
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
+  <div class="content">
+    <a class="header">{{ favorite.title }}</a>
+    
   </div>
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+       {{ favorite.user.username }}
+    </a>
   </div>
 </div>
 
-<div class="ui three column grid" id="parent_grid2">
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="ui segment">
-      <div class="parent_img"><img class="image_url" src="{{ article.imageUrl }}!"  id="img_fav"></img></div>
-      <h2 class="title_fav">{{ article.title }}</h2>
-      <p class="id_fav">ID n°{{ article.id }}</p>
-    </div>
-  </div>
-</div>
+
+
+{% endfor %}
 
 
 {% endblock %}

@@ -23,17 +23,15 @@ class FavoriteRepository extends ServiceEntityRepository
     //  * @return Favorite[] Returns an array of Favorite objects
     //  */
     /*
-    public function findByExampleField($value)
+    public function showFavorite($value)
     {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('f.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
+       $sql = 'SELECT * FROM favorite WHERE user_id = 2';
+        
+        $query = $this->getEntityManager()->createQuery($sql);
+        $query->setParameter('user_id', $value);
+        
+        return $query->getResult();
+    } 
     */
 
     /*
